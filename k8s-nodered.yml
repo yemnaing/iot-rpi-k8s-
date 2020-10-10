@@ -21,7 +21,13 @@ spec:
         - containerPort: 1880
         volumeMounts:
         - name: hostvol
+          subPathExpr: $(NODE_NAME)
           mountPath: /data
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
       volumes:
         - name: hostvol
           persistentVolumeClaim:
