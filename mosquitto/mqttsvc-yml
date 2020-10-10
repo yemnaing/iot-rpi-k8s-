@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mqtt-service
+  labels:
+    app: mqtt
+spec:
+  type: NodePort
+  ports:
+  - port: 9001
+    protocol: TCP
+  - port: 1883
+    protocol: TCP
+  selector:
+    app: mqtt
