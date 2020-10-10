@@ -24,7 +24,7 @@ spec:
         volumeMounts:
         - name: hostvol
           mountPath: /data
-        volumes:
+      volumes:
         - name: hostvol
           persistentVolumeClaim:
             # PVC name you created
