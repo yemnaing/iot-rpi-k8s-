@@ -17,5 +17,5 @@ spec:
   nfs:
     # NFS server's definition
     path: /mnt/nodered/data
-    server: 192.168.14.10
+    server: 192.168.14.11
     readOnly: false
