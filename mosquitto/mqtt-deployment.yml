@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mosquitto
+  name: mqtt
+  labels:
+    app: mqtt
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: mqtt
   template:
     metadata:
       labels:
-        app: mosquitto
+        app: mqtt
     spec:
       containers:
-      - name: mosquitto
+      - name: mqtt-mosquito
         image: eclipse-mosquitto
-        imagePullPolicy: Always
-        resources:
-          limits:
-            cpu: 0.5
-            memory: 500Mi
         ports:
         - containerPort: 9001
         - containerPort: 8883
