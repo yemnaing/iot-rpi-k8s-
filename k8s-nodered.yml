@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodered
-        image: yenaing/ubuntu_nodered
+        image: yenaing/node-red:smarthome
         ports:
         - containerPort: 1880
         volumeMounts:
