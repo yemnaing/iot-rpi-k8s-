@@ -19,6 +19,8 @@ spec:
         image: yenaing/ubuntu_nodered
         ports:
         - containerPort: 1880
+        securityContext:
+          privileged: true
         volumeMounts:
         - name: hostvol
           subPathExpr: $(NODE_NAME)
