@@ -19,3 +19,11 @@ spec:
         image: yenaing/ubuntu_nodered
         ports:
         - containerPort: 1880
+        volumeMounts:
+        - name: hostvol
+          mountPath: /data
+      volumes:
+        - name: hostvol
+          persistentVolumeClaim:
+            # PVC name you created
+            claimName: nodered-pvc
