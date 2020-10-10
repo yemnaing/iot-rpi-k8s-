@@ -21,6 +21,4 @@ spec:
         - containerPort: 1880
         securityContext:
           privileged: true
-        volumeMounts:
-        - name: hostvol
-          mountPath: /data
+
