@@ -29,4 +29,3 @@ spec:
           persistentVolumeClaim:
             # PVC name you created
             claimName: nodered-pvc
-
