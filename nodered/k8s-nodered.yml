@@ -21,11 +21,11 @@ spec:
         - containerPort: 1880
         securityContext:
           privileged: true
-        volumeMounts:
-        - name: hostvol
-          mountPath: /data
-      volumes:
-        - name: hostvol
-          persistentVolumeClaim:
+ #      volumeMounts:
+ #      - name: hostvol
+ #       mountPath: /data
+ #    volumes:
+ #       - name: hostvol
+ #         persistentVolumeClaim:
             # PVC name you created
-            claimName: nodered-pvc
+ #           claimName: nodered-pvc
